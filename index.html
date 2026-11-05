@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Buddy – Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">💪 Fitness Buddy</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Dashboard</a></li>
+      <li><a href="workout.html">Workouts</a></li>
+      <li><a href="calories.html">Calories</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Welcome back, <span id="username">Athlete</span>!</h1>
+      <p class="subtitle">Here's your fitness summary for today.</p>
+    </header>
+
+    <!-- Summary Cards -->
+    <section class="cards-grid">
+      <div class="card card--blue">
+        <div class="card-icon">🏋️</div>
+        <div class="card-body">
+          <h3 class="card-title">Workouts Today</h3>
+          <p class="card-value" id="dash-workouts">0</p>
+        </div>
+      </div>
+      <div class="card card--green">
+        <div class="card-icon">🔥</div>
+        <div class="card-body">
+          <h3 class="card-title">Calories Burned</h3>
+          <p class="card-value" id="dash-burned">0 kcal</p>
+        </div>
+      </div>
+      <div class="card card--orange">
+        <div class="card-icon">🥗</div>
+        <div class="card-body">
+          <h3 class="card-title">Calories Consumed</h3>
+          <p class="card-value" id="dash-consumed">0 kcal</p>
+        </div>
+      </div>
+      <div class="card card--purple">
+        <div class="card-icon">⚖️</div>
+        <div class="card-body">
+          <h3 class="card-title">Net Calories</h3>
+          <p class="card-value" id="dash-net">0 kcal</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly Progress -->
+    <section class="section">
+      <h2 class="section-title">Weekly Workout Goal</h2>
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <span id="goal-done">0</span> / <span id="goal-total">5</span> workouts this week
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="weekly-progress" style="width: 0%"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="section">
+      <h2 class="section-title">Recent Activity</h2>
+      <ul class="activity-list" id="recent-activity">
+        <li class="activity-empty">No activity yet. Start logging your workouts and meals!</li>
+      </ul>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="section quick-actions">
+      <a href="workout.html" class="btn btn--primary">+ Log Workout</a>
+      <a href="calories.html" class="btn btn--secondary">+ Log Meal</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Fitness Buddy &copy; 2026 — Built for internship project</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
